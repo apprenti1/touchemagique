@@ -5,8 +5,18 @@ if (Authenticator::isAuthenticated()) {
     header('Location: /template/admin');
     exit();
 }
+else {
+    if (isset($_POST['login']) && isset($_POST['password'])) {
+        if (Authenticator::authenticate($_POST['login'], $_POST['password'])) {
+            header('Location: /template/admin');
+            exit();
+        }
+        else {
+            $error = 'Login ou mot de passe incorrect';
+        }
+    }
+}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,18 +34,8 @@ if (Authenticator::isAuthenticated()) {
                 <div class="d-flex justify-content-center align-items-center flex-column text-center">
                     <h2 class="card-title">Connexion</h2>
                     <?php
-                    if (isset($_POST['login']) && isset($_POST['password'])) {
-                        if (Authenticator::authenticate($_POST['login'], $_POST['password'])) {
-                            header('Location: /template/admin');
-                            exit();
-                        }
-                        else {
-                            ?>
-                            <div class="alert alert-danger" role="alert">
-                                Login ou mot de passe incorrect
-                            </div>
-                            <?php
-                        }
+                    if (isset($error)) {
+                        echo '<div class="alert alert-danger">' . $error . '</div>';
                     }
                     ?>
                     <form action="" class="p-2" method="post">
@@ -47,7 +47,10 @@ if (Authenticator::isAuthenticated()) {
                             <label for="password" class="form-label">Mot de passe</label>
                             <input type="password" name="password" id="password" class="form-control">
                         </div>
-                        <button type="submit" class="btn btn-primary m-2 p-2">Connexion</button>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button type="submit" class="btn btn-primary m-2 p-2">Connexion</button>
+                            <a href="/" class="btn btn-secondary m-2 p-2">Retour</a>
+                        </div>
                     </form>
                 </div>
             </div>

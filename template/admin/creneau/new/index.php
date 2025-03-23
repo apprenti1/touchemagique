@@ -25,7 +25,7 @@ if (isset($_POST['date']) && isset($_POST['heure']) && isset($_POST['duree'])) {
     $query->bindParam(':heure', $heure, PDO::PARAM_STR);
     $query->bindParam(':duree', $duree, PDO::PARAM_INT);
     $query->execute();
-    header('Location: ../creneau');
+    header('Location: ../');
     exit;
     }
 }
@@ -64,7 +64,7 @@ if (isset($_POST['date']) && isset($_POST['heure']) && isset($_POST['duree'])) {
                 </div>
                 <div class="row justify-content-center">
                 <button type="submit" class="m-2 btn btn-primary" style="width: fit-content">Créer</button>
-                <a href="../creneau" class="m-2 btn btn-secondary" style="width: fit-content">
+                <a href="../" class="m-2 btn btn-secondary" style="width: fit-content">
                     <i class="bi bi-arrow-left"></i> Retour
                 </a>
                 </div>

@@ -1,5 +1,7 @@
+version: '3.8'
+
 services:
-  mariadb:
+  mariadb-touchemagique:
     image: mariadb
     volumes:
       - ./data/db:/var/lib/mysql
@@ -10,3 +12,25 @@ services:
       MYSQL_DATABASE: ${DB_NAME}
       MYSQL_USER: ${DB_USER}
       MYSQL_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - touchemagique-network
+
+  apache-php-touchemagique:
+    depends_on:
+      - mariadb-touchemagique
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      DB_HOST: mariadb-touchemagique  # Correspond au nom du service
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+    networks:
+      - touchemagique-network
+
+networks:
+  touchemagique-network:
+    driver: bridge

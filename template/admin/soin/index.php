@@ -37,7 +37,7 @@
       <h1 class="text-center m-2">Soins</h1>
       <div class="row justify-content-center align-items-center m-3">
         <a
-          href="/template/admin/soin/new"
+          href="new"
           class="btn btn-primary d-flex justify-content-center align-items-center rounded-circle p-4 m-2"
           style="width: 50px; height: 50px"
         >
@@ -47,7 +47,7 @@
           ></i>
         </a>
           <a
-            href="/template/admin"
+            href="../"
             class="btn btn-secondary d-flex justify-content-center align-items-center rounded-circle p-4 m-2"
             style="width: 50px; height: 50px"
           >
@@ -77,11 +77,11 @@
                 <td><?= $row['prix'] ?></td>
                 <td>
                   <form
-                    action="/template/admin/soin/delete"
+                    action="delete/"
                     method="post"
                     onsubmit='return confirm("Voulez-vous vraiment supprimer ce soin ?")'
                   >
-                    <input type="hidden" name="id" value="<?= $row[0] ?>" />
+                    <input type="hidden" name="id" value="<?= $row[0] ?>"/>
                     <button type="submit" value="Supprimer" class="btn btn-danger"> 
                         
                     <i class="bi bi-trash" style="font-size: 1.2rem"></i></button>

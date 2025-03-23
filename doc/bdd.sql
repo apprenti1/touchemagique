@@ -21,7 +21,6 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `email` varchar(255) NOT NULL,
   `tel` varchar(20) NOT NULL,
   `nom` varchar(50) NOT NULL,
-  `prenom` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -41,3 +40,13 @@ CREATE TABLE IF NOT EXISTS `creneaux` (
   CONSTRAINT `creneaux_ibfk_2` FOREIGN KEY (`id_type`) REFERENCES `type` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+INSERT INTO `type` (`libelle`, `prix`) VALUES
+('Radiofréquence (zone intime)', 50.00),
+('Cryolipolyse', 70.00),
+('Endosphère', 60.00),
+('Cavitation', 50.00),
+('Radiofréquence (corps)', 50.00),
+('Lipolaser', 50.00),
+('Lifting colombien', 50.00),
+('Madérothérapie', 60.00);

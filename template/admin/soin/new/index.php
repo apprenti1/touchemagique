@@ -17,7 +17,7 @@ if (isset($_POST['libelle']) && isset($_POST['prix'])) {
     $query->bindParam(':libelle', $libelle, PDO::PARAM_STR);
     $query->bindParam(':prix', $prix, PDO::PARAM_STR);
     $query->execute();
-    header('Location: ../soin');
+    header('Location: ../');
     exit;
 }
 
@@ -51,7 +51,7 @@ if (isset($_POST['libelle']) && isset($_POST['prix'])) {
                 </div>
                 <div class="row justify-content-center">
                 <button type="submit" class="m-2 btn btn-primary" style="width: fit-content">Créer</button>
-                <a href="../soin" class="m-2 btn btn-secondary" style="width: fit-content">
+                <a href="../" class="m-2 btn btn-secondary" style="width: fit-content">
                     <i class="bi bi-arrow-left"></i> Retour
                 </a>
                 </div>

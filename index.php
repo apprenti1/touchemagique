@@ -129,7 +129,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
           Soins corporels pour les femmes
         </p>
         <a
-          href="/template/reservation"
+          href="template/reservation"
           class="btn border-white border-2 rounded-0 p-3 text-white fw-bold"
           style="font-family: 'Outfit', sans-serif; background: #00000033"
           >Réserver</a
@@ -141,7 +141,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
     <nav class="navbar navbar-light bg-light">
       <div class="container">
         <a
-          href="/template/reservation"
+          href="template/reservation"
           class="navbar-brand col-12 col-md-3 d-flex flex-md-row flex-column justify-content-center align-items-center"
         >
           <img
@@ -156,7 +156,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
           class="d-flex flex-md-row flex-column justify-content-center align-items-center col-12 col-md-8"
         >
           <a
-            href="/template/reservation"
+            href="template/reservation"
             class="m-2 btn border-black border-2 rounded-0 p-3 d-flex align-items-center fw-bold"
             style="font-family: 'Outfit', sans-serif; background: #ffffffa8"
           >
@@ -164,7 +164,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
             Réserver ma séance
           </a>
           <a
-            href="/template/reservation"
+            href="#contact"
             class="m-2 btn border-black border-2 rounded-0 p-3 d-flex align-items-center fw-bold"
             style="font-family: 'Outfit', sans-serif; background: #ffffffa8"
           >
@@ -172,7 +172,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
             Nous contacter
           </a>
           <a
-            href="/template/reservation"
+            href="#contact"
             class="m-2 btn border-black border-2 rounded-0 p-3 d-flex align-items-center fw-bold"
             style="font-family: 'Outfit', sans-serif; background: #ffffffa8"
           >
@@ -294,7 +294,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
       <h1>Nos services</h1>
 
       <a
-        href="/template/reservation"
+        href="template/reservation"
         class="m-2 btn border-white text-white border-2 rounded-0 p-3 ps-4 d-flex align-items-center fw-bold"
         style="
           font-family: 'Outfit', sans-serif;
@@ -314,10 +314,11 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active w-100" style="overflow: hidden">
+
+          <div class="carousel-item active" style="overflow: hidden">
             <img
-              src="./assets/images/Zone-intime-1024x1024.png"
-              class="d-block w-100 rounded-md-4"
+            src="./assets/images/Zone-intime-1024x1024.png"
+            class="d-block w-100 rounded-md-4"
               style="border-radius: 0"
               alt=""
             />
@@ -490,7 +491,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
             </p>
             <div class="d-flex justify-content-start">
               <a
-                href="/template/reservation"
+                href="template/reservation"
                 class="m-2 btn border-white text-white border-2 rounded-0 p-3 ps-4 d-flex align-items-center fw-bold"
                 style="
                   font-family: 'Outfit', sans-serif;
@@ -545,7 +546,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
             </p>
             <div class="d-flex justify-content-center">
               <a
-                href="/template/reservation"
+                href="template/reservation"
                 class="m-2 btn border-white text-white border-2 rounded-0 p-3 ps-4 d-flex align-items-center fw-bold"
                 style="
                   font-family: 'Outfit', sans-serif;
@@ -590,8 +591,8 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
             </div>
           </div>
 
-          <div class="col-12 p-3 col-md-6">
-            <div
+          <div id="contact" class="col-12 p-3 col-md-6">
+            <h
               class="d-flex flex-column h-100 p-5 bg-light rounded-3 align-items-center"
             >
               <div class="d-flex justify-content-center">
@@ -608,7 +609,27 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
                   class="text-dark fw-bold text-decoration-none p-3 rounded-3"
                   style="transition: 0.6s all 0s; font-size: 1.2rem"
                   >contact@touchemagique.fr</a
+                >                
+              </h3>
+              <h3>
+                <a
+                  href="tel:+330606060606"
+                  class="text-dark fw-bold text-decoration-none p-3 rounded-3"
+                  style="transition: 0.6s all 0s; font-size: 1.2rem"
                 >
+                  06 06 06 06 06
+                </a>
+              </h3>
+              <h3>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=21+avenue+de+Flandres,93150+Le+Blanc-Mesnil"
+                  target="_blank"
+                  class="text-dark fw-bold text-decoration-none p-3 rounded-3 text-center d-flex"
+                  style="transition: 0.6s all 0s; font-size: 1.2rem"
+                >
+                    21, avenue de Flandres <br />
+                    93150 Le Blanc-Mesnil
+                </a>
               </h3>
             </div>
           </div>

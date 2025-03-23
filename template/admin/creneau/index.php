@@ -37,7 +37,7 @@
       <h1 class="text-center m-2">Créneaux</h1>
       <div class="row justify-content-center align-items-center m-3">
         <a
-          href="/template/admin/creneau/new"
+          href="new"
           class="btn btn-primary d-flex justify-content-center align-items-center rounded-circle p-4 m-2"
           style="width: 50px; height: 50px"
         >
@@ -47,7 +47,7 @@
           ></i>
         </a>
           <a
-            href="/template/admin"
+            href="../"
             class="btn btn-secondary d-flex justify-content-center align-items-center rounded-circle p-4 m-2"
             style="width: 50px; height: 50px"
           >
@@ -86,7 +86,7 @@
                 <td class="d-none d-md-table-cell"><?= $row['email'] ?></td>
                 <td class="d-none d-md-table-cell">
                   <form
-                    action="/template/admin/creneau/delete"
+                    action="delete/"
                     method="post"
                     onsubmit='return confirm("Voulez-vous vraiment supprimer ce créneau ?")'
                   >
@@ -105,7 +105,7 @@
         </div>
       </div>
     </div>
-    <script src="//cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+    <script src="/cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
     <script>
       $(document).ready(function () {
         let table = new DataTable("#myTable", {
