@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo start run
 chmod 777 .env
 docker compose --env-file .env up --build -d
 
