@@ -129,7 +129,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
           Soins corporels pour les femmes
         </p>
         <a
-          href="template/reservation"
+          href="template/reservation/"
           class="btn border-white border-2 rounded-0 p-3 text-white fw-bold"
           style="font-family: 'Outfit', sans-serif; background: #00000033"
           >Réserver</a
@@ -141,7 +141,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
     <nav class="navbar navbar-light bg-light">
       <div class="container">
         <a
-          href="template/reservation"
+          href="template/reservation/"
           class="navbar-brand col-12 col-md-3 d-flex flex-md-row flex-column justify-content-center align-items-center"
         >
           <img
@@ -156,7 +156,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
           class="d-flex flex-md-row flex-column justify-content-center align-items-center col-12 col-md-8"
         >
           <a
-            href="template/reservation"
+            href="template/reservation/"
             class="m-2 btn border-black border-2 rounded-0 p-3 d-flex align-items-center fw-bold"
             style="font-family: 'Outfit', sans-serif; background: #ffffffa8"
           >
@@ -294,7 +294,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
       <h1>Nos services</h1>
 
       <a
-        href="template/reservation"
+        href="template/reservation/"
         class="m-2 btn border-white text-white border-2 rounded-0 p-3 ps-4 d-flex align-items-center fw-bold"
         style="
           font-family: 'Outfit', sans-serif;
@@ -491,7 +491,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
             </p>
             <div class="d-flex justify-content-start">
               <a
-                href="template/reservation"
+                href="template/reservation/"
                 class="m-2 btn border-white text-white border-2 rounded-0 p-3 ps-4 d-flex align-items-center fw-bold"
                 style="
                   font-family: 'Outfit', sans-serif;
@@ -546,7 +546,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
             </p>
             <div class="d-flex justify-content-center">
               <a
-                href="template/reservation"
+                href="template/reservation/"
                 class="m-2 btn border-white text-white border-2 rounded-0 p-3 ps-4 d-flex align-items-center fw-bold"
                 style="
                   font-family: 'Outfit', sans-serif;

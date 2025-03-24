@@ -48,25 +48,25 @@ if (!Authenticator::isAuthenticated()) {
         </div>
         <div class="row align-items-stretch">
             <div class="col-md-3 col-12 p-3">
-                <a href="./planning" class="text-decoration-none bg-light rounded-4 W-100 h-100 p-md-5 p-2 d-flex jusitfy-content-center align-items-center flex-column">
+                <a href="./planning/" class="text-decoration-none bg-light rounded-4 W-100 h-100 p-md-5 p-2 d-flex jusitfy-content-center align-items-center flex-column">
                     <i class="bi bi-calendar-fill text-size-md-8 text-size-5"></i>
                     <h2>Planning</h2>
                 </a>
             </div>
             <div class="col-md-3 col-12 p-3">
-                <a href="./creneau" class="text-decoration-none bg-light rounded-4 W-100 h-100 p-md-5 p-2 d-flex JUsitfy-content-center align-items-center flex-column">
+                <a href="./creneau/" class="text-decoration-none bg-light rounded-4 W-100 h-100 p-md-5 p-2 d-flex JUsitfy-content-center align-items-center flex-column">
                     <i class="bi bi-clock-fill text-size-md-8 text-size-5"></i>
                     <h2>Créneaux</h2>
                 </a>
             </div>
             <div class="col-md-3 col-12 p-3">
-                <a href="./soin" class="text-decoration-none bg-light rounded-4 W-100 h-100 p-md-5 p-2 d-flex JUsitfy-content-center align-items-center flex-column">
+                <a href="./soin/" class="text-decoration-none bg-light rounded-4 W-100 h-100 p-md-5 p-2 d-flex JUsitfy-content-center align-items-center flex-column">
                 <i class="bi bi-boxes text-size-md-8 text-size-5"></i>
                 <h2>Soins</h2>
                 </a>
             </div>
             <div class="col-md-3 col-12 p-3">
-                <a href="./logout" class="text-decoration-none bg-light rounded-4 W-100 h-100 p-md-5 p-2 d-flex JUsitfy-content-center align-items-center flex-column">
+                <a href="./logout/" class="text-decoration-none bg-light rounded-4 W-100 h-100 p-md-5 p-2 d-flex JUsitfy-content-center align-items-center flex-column">
                 <i class="bi bi-box-arrow-right text-size-md-8 text-size-5"></i>
                 <h2>Déconnexion</h2>
                 </a>

@@ -47,7 +47,7 @@ if (!Authenticator::isAuthenticated()) {
                 <button class="btn btn-secondary m-1" style="width: fit-content; font-size: 1.3rem;" onclick="document.getElementById('date').stepUp(screen.width > 767 ? 7 : 1); document.getElementById('date').dispatchEvent(new Event('change'));">
                     <i class="bi bi-arrow-right"></i>
                 </button>
-                <a href="/template/admin" class="btn btn-secondary m-1" style="width: fit-content; font-size: 1.3rem;">
+                <a href="/template/admin/" class="btn btn-secondary m-1" style="width: fit-content; font-size: 1.3rem;">
                     <i class="bi bi-house"></i>
                 </a>
 

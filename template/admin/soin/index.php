@@ -37,7 +37,7 @@
       <h1 class="text-center m-2">Soins</h1>
       <div class="row justify-content-center align-items-center m-3">
         <a
-          href="new"
+          href="new/"
           class="btn btn-primary d-flex justify-content-center align-items-center rounded-circle p-4 m-2"
           style="width: 50px; height: 50px"
         >

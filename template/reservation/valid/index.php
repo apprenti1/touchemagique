@@ -168,7 +168,7 @@ $creneau;
             <p class="text-center">Pour toutes annulations/effacement des données <br> merci d'appeler le: <span class="fw-bold">0606060606</span></p>
             
             <div class="d-flex justify-content-center">
-                <a href="/" class="btn btn-outline-dark">Retour</a>
+                <a href="../../../" class="btn btn-outline-dark">Retour</a>
             </div>
         </div>
     </div>

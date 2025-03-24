@@ -43,7 +43,7 @@ if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' 
                         </div>
                         <div class="d-flex justify-content-center align-items-center">
                             <button type="submit" class="btn btn-primary m-2 p-2">Connexion</button>
-                            <a href="/" class="btn btn-secondary m-2 p-2">Retour</a>
+                            <a href="../../" class="btn btn-secondary m-2 p-2">Retour</a>
                         </div>
                     </form>
                 </div>
