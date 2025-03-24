@@ -1,8 +1,5 @@
 #!/bin/sh
 
+chmod 777 .env
+docker compose --env-file .env up --build -d
 
-# start db
-docker compose --env-file .env up -d
-
-# start php server
-php -S localhost:8000
