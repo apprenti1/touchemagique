@@ -6,13 +6,13 @@
     use Service\Bdd;
 
     if (!Authenticator::isAuthenticated()) {
-        header('Location: /template/login/');
+        header('Location: ../../../../template/login/');
         exit;
     }
     if (isset($_POST['id'])) {
         $bdd = new Bdd();
         $query = $bdd->getConnection()->prepare('DELETE FROM creneaux WHERE id = :id');
         $query->execute(['id'=>$_POST['id']]);
-        header('Location: /template/admin/creneau');
+        header('Location: ../../../../template/admin/creneau');
         exit;
     }

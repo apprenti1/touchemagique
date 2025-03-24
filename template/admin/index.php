@@ -3,7 +3,7 @@ namespace Service;
 require_once '../../src/service/Authenticator.php';
 use Service\Authenticator;
 if (!Authenticator::isAuthenticated()) {
-    header('Location: /template/login/');
+    header('Location: ../../template/login/');
     exit;
 }
 ?>

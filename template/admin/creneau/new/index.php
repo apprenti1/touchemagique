@@ -3,7 +3,7 @@ require_once '../../../../src/service/Authenticator.php';
 use Service\Bdd;
 use Service\Authenticator;
 if (!Authenticator::isAuthenticated()) {
-    header('Location: /template/login/');
+    header('Location: ../../../../template/login/');
     exit;
 }
 if (isset($_POST['date']) && isset($_POST['heure']) && isset($_POST['duree'])) {

@@ -7,7 +7,7 @@
     use Service\Bdd;
     use PDO;
     if (!Authenticator::isAuthenticated()) {
-        header('Location: /template/login/');
+        header('Location: ../../../../template/login/');
         exit;
     }
     header('Content-Type: application/json');
