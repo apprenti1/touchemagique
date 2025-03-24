@@ -115,7 +115,9 @@ document.querySelector('#detail').parentNode.style.visibility = 'hidden';
 
 
 function creneauDetails(creneau) {
-fetch('./ajax?id=' + creneau).then(response => response.json()).then(data => {
+    $.ajax({
+    url: ('ajax?id=' + creneau),
+    success: function(data) {
 const detailDiv = document.getElementById('detail');
 if (data.length > 0) {
 const creneauData = data[0];
@@ -152,6 +154,7 @@ creneauData.prenom || 'N/A'
 } else {
 detailDiv.innerHTML = '<p>Aucun détail trouvé pour ce créneau.</p>';
 } detailDiv.parentElement.style.visibility = "visible";
+    }
 });
 }
 
@@ -161,7 +164,9 @@ const isMobile = window.innerWidth < 768;
 const date = document.getElementById('date').value;
 
 if (isMobile) {
-fetch('./ajax?type=d&date=' + date).then(response => response.text()).then(data => {
+    $.ajax({
+    url: ('ajax?type=d&date=' + date),
+    success: function(data) {
     console.log(data);
 const planning = JSON.parse(data);
 document.getElementById('daylyplanning').innerHTML = '';
@@ -195,9 +200,12 @@ creneau.duree
 document.getElementById('daylyplanning').appendChild(div);
 document.getElementById('daylyplanning').appendChild(button);
 }
+    }
 });
 } else {
-fetch('./ajax?type=w&date=' + date).then(response => response.text()).then(data => {
+    $.ajax({
+    url: ('/ajax?type=w&date=' + date),
+    success: function(data) {
 const planning = JSON.parse(data);
 const planningDivs = {
 1: document.getElementById('lundi'),
@@ -241,6 +249,7 @@ creneau.duree
 planningDivs[jour].appendChild(div);
 planningDivs[jour].appendChild(button);
 }
+    }
 });
 }
 }
