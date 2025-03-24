@@ -2,13 +2,13 @@
 require_once '../../src/service/Authenticator.php';
 use Service\Authenticator;
 if (Authenticator::isAuthenticated()) {
-    header('Location: /template/admin');
+    header('Location: /template/admin/');
     exit();
 }
 else {
     if (isset($_POST['login']) && isset($_POST['password'])) {
         if (Authenticator::authenticate($_POST['login'], $_POST['password'])) {
-            header('Location: /template/admin');
+            header('Location: /template/admin/');
             exit();
         }
         else {

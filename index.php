@@ -4,7 +4,7 @@ use Symfony\Component\Dotenv\Dotenv;
 $dotenv = new Dotenv();
 $dotenv->usePutenv()->load(__DIR__ . '/.env');
 if (!isset($_ENV['LOGIN']) || !isset($_ENV['PASSWORD']) || $_ENV['LOGIN'] == '' || $_ENV['PASSWORD'] == '') {
-  header('Location: /template/setup');
+  header('Location: /template/setup/');
   exit;
 }
 ?>

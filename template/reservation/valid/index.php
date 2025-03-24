@@ -28,13 +28,13 @@ $creneau;
             if (!preg_match('/^\+?[0-9]{10,15}$/', $tel)) {
                 $errors[] = 'le numéro de téléphone est incorrect';
                 $_SESSION['errors'] = $errors;
-                header('Location: /template/reservation');
+                header('Location: /template/reservation/');
                 exit;
             }
             else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $errors[] = 'l\'email est incorrect';
                 $_SESSION['errors'] = $errors;
-                header('Location: /template/reservation');
+                header('Location: /template/reservation/');
                 exit;
             }
             else {
@@ -62,7 +62,7 @@ $creneau;
         else {
             $errors[] = 'Ce creneau est deja pris';
             $_SESSION['errors'] = $errors;
-            header('Location: /template/reservation');
+            header('Location: /template/reservation/');
             exit;
         }
     }

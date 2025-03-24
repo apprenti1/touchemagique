@@ -6,7 +6,7 @@
     use Service\Bdd;
 
     if (!Authenticator::isAuthenticated()) {
-        header('Location: /template/login');
+        header('Location: /template/login/');
         exit;
     }
     if (isset($_POST['id'])) {
