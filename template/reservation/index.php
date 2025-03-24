@@ -79,7 +79,7 @@
     </head>
     <body>
 
-        <form action="/template/reservation/valid/" method="post" class="container text-center my-4 d-flex flex-column justify-content-center align-items-center">
+        <form action="valid/" method="post" class="container text-center my-4 d-flex flex-column justify-content-center align-items-center">
             <h1>Réservation Séance Touchemagique</h1>
             <a href="../../">
                 <img src="../../assets/images/cropped-Logo-Touche-Magique.jpeg" class="rounded-4" style="width: 20rem" alt="">
