@@ -16,12 +16,12 @@ WORKDIR /var/www/html
 # Copier tous les fichiers du projet dans le conteneur
 COPY ./ /var/www/html
 
-# Donner les bons droits aux fichiers pour Apache
-RUN chown -R www-data:www-data /var/www/html
-RUN chmod -R 777 /var/www/html
-
 # Install project dependencies
 RUN composer install --no-interaction --no-plugins --no-scripts --no-dev --optimize-autoloader && ls -al /var/www/html
+
+# Donner les bons droits aux fichiers pour Apache
+RUN chown -R www-data:www-data /var/www/html
+#RUN chmod -R 777 /var/www/html
 
 # Exposer le port 80 (Apache)
 EXPOSE 80
