@@ -2,5 +2,12 @@
 
 echo start run
 chmod 777 .env
-docker compose --env-file .env up --build -d
+if command -v docker-compose >/dev/null 2>&1; then
+    docker-compose --env-file .env up --build -d
+elif command -v docker >/dev/null 2>&1; then
+    docker compose --env-file .env up --build -d
+else
+    echo "Error: Docker is not installed"
+    exit 1
+fi
 
