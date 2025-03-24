@@ -205,7 +205,7 @@ document.getElementById('daylyplanning').appendChild(button);
 });
 } else {
     $.ajax({
-    url: ('/ajax?type=w&date=' + date),
+    url: ('ajax?type=w&date=' + date),
     success: function(data) {
 const planning = JSON.parse(data);
 const planningDivs = {
