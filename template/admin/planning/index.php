@@ -67,7 +67,7 @@ if (!Authenticator::isAuthenticated()) {
                         <?php endfor; ?>
                     </div>
                     <?php foreach (['Lundi', 'Mardi', 'Mercredi'] as $jour): ?>
-                        <div class="col-3 border-1 planning p-0" style="border-right: 1px solid #000a">
+                        <div class="col-3 border-1 planning p-0 d-flex flex-column" style="border-right: 1px solid #000a">
                             <p class="p-0" style="border-bottom: solid 3px black"><?= $jour ?> <span class="fw-bold day"></span></p>
                             <div id="<?= strtolower($jour) ?>" class="d-flex flex-column h-100 px-1"></div>
                         </div>
@@ -76,7 +76,7 @@ if (!Authenticator::isAuthenticated()) {
                 <div
                     class="col-6 bg-light h-100 row p-0">
                     <?php foreach (['Jeudi', 'Vendredi', 'Samedi', 'Dimanche'] as $jour): ?>
-                        <div class="col-3 border-1 planning p-0" style="border-right: 1px solid #000a">
+                        <div class="col-3 border-1 planning p-0 d-flex flex-column" style="border-right: 1px solid #000a">
                         <p class="p-0" style="border-bottom: solid 3px black"><?= $jour ?> <span class="fw-bold day"></span></p>
                         <div id="<?= strtolower($jour) ?>" class="d-flex flex-column h-100 px-1"></div>
                         </div>
@@ -169,7 +169,7 @@ if (isMobile) {
     url: ('ajax?type=d&date=' + date),
     success: function(data) {
     console.log(data);
-const planning = JSON.parse(data);
+const planning = data;
 document.getElementById('daylyplanning').innerHTML = '';
 for (const creneau of planning) {
 const jour = new Date(creneau.date).getDay();
@@ -207,7 +207,7 @@ document.getElementById('daylyplanning').appendChild(button);
     $.ajax({
     url: ('ajax?type=w&date=' + date),
     success: function(data) {
-const planning = JSON.parse(data);
+const planning = data;
 const planningDivs = {
 1: document.getElementById('lundi'),
 2: document.getElementById('mardi'),
@@ -232,10 +232,10 @@ const flex = style ? style.flex.split(' ')[0] : 0;
 return acc + parseFloat(flex);
 }, 0);
 console.log(flexdiv);
-div.style.flex = ((decimale - 9) / 13) * 1.03 - flexdiv;
+div.style.flex = ((decimale - 9) / 12) - flexdiv;
 div.classList.add('p-0', 'border-0');
 button.classList.add(creneau.id_utilisateur === null ? 'bg-primary' : 'bg-success', 'w-100', 'rounded-2', 'p-0', 'border-0', 'text-white', 'btn');
-button.style.flex = creneau.duree / 60 / 13 * 1.03;
+button.style.flex = creneau.duree / 60 / 12;
 button.style.fontSize = '0.8rem';
 button.style.lineHeight = '0.6rem';
 button.style.fontWeight = 'bold';
