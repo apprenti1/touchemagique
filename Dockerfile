@@ -12,6 +12,7 @@ COPY ./ /var/www/html
 
 # Donner les bons droits aux fichiers pour Apache
 RUN chown -R www-data:www-data /var/www/html
+RUN chmod -R 777 /var/www/html
 
 # Exposer le port 80 (Apache)
 EXPOSE 80
