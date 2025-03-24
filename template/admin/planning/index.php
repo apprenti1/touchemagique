@@ -36,6 +36,7 @@ if (!Authenticator::isAuthenticated()) {
                 }
             }
         </style>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     </head>
     <body>
         <div class="container text-center pt-3 flex-grow-1 d-flex flex-column">
