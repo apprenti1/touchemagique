@@ -7,14 +7,14 @@ RUN docker-php-ext-install pdo pdo_mysql
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Install project dependencies
-RUN composer install --no-interaction --no-plugins --no-scripts
-
 # Définir le répertoire de travail
 WORKDIR /var/www/html
 
 # Copier tous les fichiers du projet dans le conteneur
 COPY ./ /var/www/html
+
+# Install project dependencies
+RUN composer install --no-interaction --no-plugins --no-scripts
 
 # Donner les bons droits aux fichiers pour Apache
 RUN chown -R www-data:www-data /var/www/html
