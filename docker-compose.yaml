@@ -17,8 +17,6 @@ services:
     build: .
     ports:
       - "80:80"
-    volumes:
-      - .:/var/www/html
     environment:
       DB_HOST: mariadb-touchemagique  # Correspond au nom du service
       DB_USER: ${DB_USER}
