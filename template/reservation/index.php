@@ -8,7 +8,7 @@
                 font-style: normal;
                 font-weight: 400;
                 font-display: fallback;
-                src: url("/assets/images/Outfit-VariableFont_wght.ttf") format("truetype");
+                src: url("../../assets/images/Outfit-VariableFont_wght.ttf") format("truetype");
                 font-stretch: normal;
             }
 
@@ -17,7 +17,7 @@
                 font-style: bold;
                 font-weight: 400;
                 font-display: fallback;
-                src: url("/assets/images/Outfit-VariableFont_wght.ttf") format("truetype");
+                src: url("../../assets/images/Outfit-VariableFont_wght.ttf") format("truetype");
                 font-stretch: normal;
             }
             * {
