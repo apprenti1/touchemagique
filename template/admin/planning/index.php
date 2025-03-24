@@ -115,7 +115,7 @@ document.querySelector('#detail').parentNode.style.visibility = 'hidden';
 
 
 function creneauDetails(creneau) {
-fetch('ajax?id=' + creneau).then(response => response.json()).then(data => {
+fetch('./ajax?id=' + creneau).then(response => response.json()).then(data => {
 const detailDiv = document.getElementById('detail');
 if (data.length > 0) {
 const creneauData = data[0];
@@ -161,7 +161,7 @@ const isMobile = window.innerWidth < 768;
 const date = document.getElementById('date').value;
 
 if (isMobile) {
-fetch('ajax?type=d&date=' + date).then(response => response.text()).then(data => {
+fetch('./ajax?type=d&date=' + date).then(response => response.text()).then(data => {
     console.log(data);
 const planning = JSON.parse(data);
 document.getElementById('daylyplanning').innerHTML = '';
@@ -197,7 +197,7 @@ document.getElementById('daylyplanning').appendChild(button);
 }
 });
 } else {
-fetch('ajax?type=w&date=' + date).then(response => response.text()).then(data => {
+fetch('./ajax?type=w&date=' + date).then(response => response.text()).then(data => {
 const planning = JSON.parse(data);
 const planningDivs = {
 1: document.getElementById('lundi'),
